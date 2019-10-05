@@ -1,12 +1,12 @@
 <style>
-    #pdfurl{width: 300px; border-radius: 4px;  border : 1px solid #ccc; line-height: 2em; margin-right: 1em}
+    #pdfurl{width: 70%; max-width: 600px; border-radius: 4px;  border : 1px solid #ccc; line-height: 2em; margin-right: 1em}
     button{line-height: 2em; border: 1px solid #ccc;  border-radius: 4px; background-color: #ccc; color: white; cursor: pointer }
     #myIframe {border: 1px solid #ccc; width: 90%; margin: 10px auto 10px; height: 500px; display: block; }
 </style>
 
 <h1>Test puppeteer</h1>
 <form>
-    <p><input type="text" id="pdfurl"><button>Convert to pdf</button></p>
+    <p><label for="pdfurl">Enter a webpage address: <br><input type="text" id="pdfurl"></label> <button>Convert to pdf</button></p>
 </form>
 <iframe id="myIframe" src=""></iframe>
 <script>
