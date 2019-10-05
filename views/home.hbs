@@ -16,7 +16,7 @@
         let pdfurl = getNode('#pdfurl').value
         let localhost = 'http://localhost:{{port}}/'
         console.log(pdfurl)
-        getNode('#myIframe').style.border = '1px solid red'
+        
         getNode('#myIframe').src = 'http://localhost:{{port}}/export/pdf/?url='+encodeURIComponent(pdfurl)
     }, false)
 </script>
