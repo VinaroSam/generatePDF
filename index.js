@@ -7,10 +7,14 @@ const config = require('./config')
 const path = require('path')
 const puppeteer = require('puppeteer');
 const fs = require('fs')
+const morgan = require('morgan')
+
 
 if(!fs.existsSync('./pdf')){
     fs.mkdirSync('./pdf');
   }
+
+app.use(morgan('combined'))
 app.use(express.static('public'))
 app.use(bodyParser.json())
 app.use('/vue', express.static(path.join(__dirname, '/node_modules/vue/dist/')))
@@ -22,7 +26,8 @@ app.get('/', (req, res)=>{
     console.log(__dirname)    
     res.render('home', {
         name: 'Vinaro Sam',
-        test: ['1',' 2', '2', '4', '3']
+        test: ['1',' 2', '2', '4', '3'],
+        port:config.port 
         }
     )
 })

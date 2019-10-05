@@ -14,9 +14,9 @@
     document.addEventListener('submit', function(event){
         event.preventDefault()
         let pdfurl = getNode('#pdfurl').value
-        let localhost = 'http://localhost:8010/'
+        let localhost = 'http://localhost:{{port}}/'
         console.log(pdfurl)
         getNode('#myIframe').style.border = '1px solid red'
-        getNode('#myIframe').src = 'http://localhost:8010/export/pdf/?url='+encodeURIComponent(pdfurl)
+        getNode('#myIframe').src = 'http://localhost:{{port}}/export/pdf/?url='+encodeURIComponent(pdfurl)
     }, false)
 </script>
