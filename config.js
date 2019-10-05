@@ -1,3 +1,3 @@
 module.exports = {
-    port: 8010
+    port: 3000
 }
